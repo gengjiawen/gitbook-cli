@@ -3,3 +3,4 @@ image:
 
 tasks:
   - init: yarn
+  - init: npm i -g npm-check-updates
