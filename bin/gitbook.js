@@ -183,6 +183,8 @@ program
     .action(function(commandName){
         var args = parsedArgv._.slice(1);
         var kwargs = _.omit(parsedArgv, '$0', '_');
+        console.log(commandName, args,kwargs)
+        console.log(program.gitbook)
 
         runPromise(
             manager.ensureAndLoad(bookRoot, program.gitbook)

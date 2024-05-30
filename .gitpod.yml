@@ -4,4 +4,5 @@ image:
 tasks:
   - init: pnpm i
   - init: npm i -g npm-check-updates
-  - init: sudo apt-get install ffmpeg libsm6 libxext6 libegl1 libopengl0 -y && sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+  - init: sudo apt-get install ffmpeg libsm6 libxext6 libegl1 libxcb-cursor0 libopengl0 -y && sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+  - init: sudo apt-get update && sudo apt-get install -y gnupg apt-transport-https && curl -sSL https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - && echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list && sudo apt update && sudo apt-get install -y google-chrome-stable --no-install-recommends
